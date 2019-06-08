@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+Odaberite task
+<div ng-repeat="task in taskovi">
+    <label>{{task.rad}}</label>
+    <button name='preuzmiRad' ng-click="preuzmiRad(task)">Preuzmi rad</button>
+    <input type="file" name="fileMedia" id="fileMedia" ></input><button name='preuzmiRad' ng-click="posaljiRad(task)">Posalji rad</button>
+</div>
+</body>
+</html>

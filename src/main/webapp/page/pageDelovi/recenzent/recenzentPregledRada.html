@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+</head>
+<body>
+<form name='f' method='POST'
+      style="background-color: rgb(241, 247, 252);">
+
+    <p>Naslov rada</p>
+    <h1>{{rad}}</h1><br>
+    <button name='preuzmiRad' ng-click="preuzmiRad(rad.id)">Preuzmi rad</button><br>
+    <div ng-repeat="property in properties.formFields">
+        <p>{{property.label}}</p>
+        <input ng-if="property.type.name=='string' && property.id!='putanjaFajla'" ng-model="model[property.id]"
+               class="form-control" type="text" name="property.label" required=""
+               style="margin-top:0px;margin-bottom:10px;background-color:rgb(255,255,255);">
+        <select ng-if="property.type.name=='enum'" ng-options="g for (key, g) in property.type.values"
+                ng-model="model[property.id]"></select>
+    </div>
+    <br>
+    <input class="btn btn-primary btn-block" ng-click="potvrdiRecenziju()" value="Potvrdi recenziju" style="background-color:rgb(244,133,71);"></input>
+</form>
+</body>
+</html>

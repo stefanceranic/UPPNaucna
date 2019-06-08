@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+Odaberite recenzente
+   <div ng-repeat="recenzent in recenzenti">
+    <label>{{recenzent.ime}}</label>
+    <button name='dodajRecenzenta' ng-click="dodajRecenzenta(recenzent)">Dodaj recenzenta</button>
+</div>
+<button name='potvrdiRecenzente' ng-click="potvrdiRecenzente()">Potvrdi</button>
+</body>
+</html>

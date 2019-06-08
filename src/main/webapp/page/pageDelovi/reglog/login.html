@@ -1,0 +1,9 @@
+<div class="login-clean" style="background-color:rgb(255,255,255);padding-top:130px;">
+    <form name='f' method='POST' ng-submit="submit()" style="background-color:rgb(241,247,252);">
+        <h1 class="text-center" style="height:70px;">Prijavi se</h1>
+        <input class="form-control" type="text" name="username" required="" placeholder="Username" ng-model="korisnikDTO.username" style="margin-top:0px;margin-bottom:10px;background-color:rgb(255,255,255);">
+        <input class="form-control" type="password" name="password" required="" ng-model="korisnikDTO.password" placeholder="Password" maxlength="30" minlength="4" style="background-color:rgb(255,255,255);">
+        <input class="btn btn-primary btn-block" type="submit" value="Prijavi se" style="background-color:rgb(244,133,71);"></input>
+        <p class="text-center"> <a ng-click="toRegister()" class="btn">Nemate nalog? Registrujte se.</a></p>
+    </form>
+</div>

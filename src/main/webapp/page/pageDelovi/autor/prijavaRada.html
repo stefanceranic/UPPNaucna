@@ -1,0 +1,18 @@
+<div class="login-clean" style="background-color:rgb(255,255,255);padding-top:130px;">
+    <form name='f' method='POST' ng-submit="submit()" style="background-color:rgb(241,247,252);">
+        <h1 class="text-center" style="height:70px;">Prijavi rad</h1>
+        <div ng-repeat="property in properties.formFields">
+            <label>{{property.label}}</label>
+            <input ng-if="property.type.name=='string' && property.id!='putanjaFajla'"  ng-model="model[property.id]" class="form-control" type="text" name="property.label" required=""  style="margin-top:0px;margin-bottom:10px;background-color:rgb(255,255,255);">
+            <input ng-if="property.type.name=='boolean'" ng-model="model[property.id]" class="form-control" type="checkbox" name="property.label" required=""  maxlength="30" minlength="4" style="background-color:rgb(255,255,255);">
+            <input ng-if="property.type.name=='long'" ng-model="model[property.id]" class="form-control" type="number" name="property.label"  maxlength="30" minlength="4" style="background-color:rgb(255,255,255);">
+            <br ng-if="property.type.name=='enum'">
+            <select ng-if="property.type.name=='enum'" ng-options="g for (key, g) in property.type.values" ng-model="model[property.id]"></select>
+            <section ng-if="property.id=='putanjaFajla'" id="uploadMedia">
+                <input type="file" name="fileMedia" id="fileMedia" ></input>
+            </section>
+        </div>
+        <input class="btn btn-primary btn-block" type="submit" value="Prijavi rad" style="background-color:rgb(244,133,71);"></input>
+    </form>
+
+</div>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body><form name='f' method='POST'
+		style="background-color: rgb(241, 247, 252);">
+<label>{{rad.naziv}}</label>
+    <button name='preuzmiRad' ng-click="preuzmiRad(rad.id)">Preuzmi rad</button>
+<input class="btn btn-primary btn-block" ng-click="proveraRada(true)" value="Prihvati" style="background-color:rgb(244,133,71);"></input>
+        <p class="text-center"> <a ng-click="proveraRada(false)" class="btn">Odbij rad</a></p>
+</form></body>
+</html>

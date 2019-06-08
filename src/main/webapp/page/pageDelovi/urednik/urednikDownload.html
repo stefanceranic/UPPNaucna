@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+Odaberite casopis
+<div ng-repeat="rad in radovi">
+    <label>{{rad.naziv}}</label>
+    <button name='preuzmiRad' ng-click="preuzmiRad(rad.id)">Preuzmi rad</button>
+</div>
+
+</body>
+</html>

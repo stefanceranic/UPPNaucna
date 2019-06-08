@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Odaberite task
+<div ng-repeat="task in taskovi">
+    <label>{{task.rad}}</label>
+    <button name='odaberiCasopis' ng-click="odaberiCasopis(task)">Odaberi rad</button>
+</div>
+
+</body>
+</html>

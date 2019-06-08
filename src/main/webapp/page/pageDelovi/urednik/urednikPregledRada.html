@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Pocetna</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link"ng-click="logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+	<form name='f' method='POST'
+		style="background-color: rgb(241, 247, 252);">
+		<h2>NASLOV</h2>
+		{{rad.naziv}}
+		<h3>apstrakt</h3>
+		{{rad.apstrakt}}
+		<h3>naucna oblast</h3>
+		{{rad.naucnaOblast}}
+		<h3>kljucne reci</h3>
+		{{rad.kljucneReci}}
+		<input class="btn btn-primary btn-block" ng-click="proveraRada(true)" value="Prihvati" style="background-color:rgb(244,133,71);"></input>
+        <p class="text-center"> <a ng-click="proveraRada(false)" class="btn">Odbij rad</a></p>
+	</form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Pocetna</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link"ng-click="logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<h2>{{recenzije[0].rad.naziv}}</h2>
+<button name='preuzmiRad' ng-click="preuzmiRad(recenzije[0].rad.naziv)">Preuzmi rad</button>
+
+<h3>Recenzije</h1>
+	<form ng-repeat="recenzija in recenzije" name='f' method='POST'
+		style="background-color: rgb(241, 247, 252);">
+		<h3>NASLOV RADA</h3>
+		{{recenzija.rad.naziv}}
+		<h3>Recenzent</h3>
+		{{recenzija.recenzent.email}}
+		<h3>Komentar</h3>
+		{{recenzija.komentar}}
+		<h3>Predlog ocene</h3>
+		{{recenzija.ocena}}
+		
+	</form>
+	
+	<div ng-repeat="property in properties.formFields">
+        <p>{{property.label}}</p>
+        <input ng-if="property.type.name=='string' && property.id!='putanjaFajla'" ng-model="model[property.id]"
+               class="form-control" type="text" name="property.label" required=""
+               style="margin-top:0px;margin-bottom:10px;background-color:rgb(255,255,255);">
+        <select ng-if="property.type.name=='enum'" ng-options="g for (key, g) in property.type.values"
+                ng-model="model[property.id]"></select>
+    </div>
+    <input class="btn btn-primary btn-block" ng-click="potvrdiOcenu()" value="Potvrdi ocenu" style="background-color:rgb(244,133,71);"></input>
+</body>
+</html>
