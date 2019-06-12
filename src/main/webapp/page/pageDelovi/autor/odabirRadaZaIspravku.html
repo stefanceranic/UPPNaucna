@@ -1,3 +1,4 @@
+<div class="body" style="padding-top:130px;">
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,11 +6,16 @@
 <title>Insert title here</title>
 </head>
 <body>
+<form class="formaLog p-3" style="background-color:rgb(255,255,255)">
 Odaberite task
-<div ng-repeat="task in taskovi">
-    <label>{{task.rad}}</label>
-    <button name='preuzmiRad' ng-click="preuzmiRad(task)">Preuzmi rad</button>
-    <input type="file" name="fileMedia" id="fileMedia" ></input><button name='preuzmiRad' ng-click="posaljiRad(task)">Posalji rad</button>
+<div class="row">
+<div class="col-3 kv p-3 m-3" ng-repeat="task in taskovi">
+    <label class="m-1">{{task.rad}}</label><br>
+    <button class="m-1" name='preuzmiRad' ng-click="preuzmiRad(task)">Preuzmi rad</button><br>
+    <input class="m-1" type="file" name="fileMedia" id="fileMedia" ></input><button name='preuzmiRad' ng-click="posaljiRad(task)">Posalji rad</button>
 </div>
+</div>
+</form>
 </body>
 </html>
+</div>

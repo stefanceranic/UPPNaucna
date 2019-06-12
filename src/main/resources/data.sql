@@ -1,4 +1,4 @@
-insert into Casopis (id, naziv, tip_casopisa, open_access, glavni_urednik_id) values (1, 'Casopis1', 0, false, 9);
+insert into Casopis (id, naziv, tip_casopisa, open_access, glavni_urednik_id) values (1, 'Casopis1', 0, true, 9);
 insert into Casopis (id, naziv, tip_casopisa, open_access, glavni_urednik_id) values (2, 'Casopis2', 1, false, 9);
 insert into Casopis (id, naziv, tip_casopisa, open_access, glavni_urednik_id) values (3, 'Casopis3', 1, false, 9);
 
@@ -39,6 +39,7 @@ insert into recenzenti_casopisa(casopis_id, recenzent_id) values (1,6);
 insert into recenzenti_casopisa(casopis_id, recenzent_id) values (1,7);
 insert into recenzenti_casopisa(casopis_id, recenzent_id) values (1,8);
 
+insert into casopis_clanovi(casopis_id, clanovi_id) values (1, 1);
 --insert into Rad(id, naziv, apstrakt, naucna_oblast, status_rada, putanja, casopis_id, autor_id) values(1, 'Rad1','Naucni rad', 0, 1, 'C:\\Users\\uvrnu\\Desktop\\rad1.pdf',1,1);
 --insert into Rad(id, naziv, apstrakt, naucna_oblast, status_rada, putanja, casopis_id, autor_id) values(2, 'Rad1','Naucni rad', 0, 1, 'C:\\Users\\uvrnu\\Desktop\\rad1.pdf',1,1);
 --insert into Rad(id, naziv, apstrakt, naucna_oblast, status_rada, putanja, casopis_id, autor_id) values(3, 'Rad1','Naucni rad', 0, 1, 'C:\\Users\\uvrnu\\Desktop\\rad1.pdf',1,1);

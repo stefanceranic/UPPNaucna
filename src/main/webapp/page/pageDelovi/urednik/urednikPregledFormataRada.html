@@ -1,14 +1,16 @@
+<div class="body" style="padding-top:130px;">
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body><form name='f' method='POST'
-		style="background-color: rgb(241, 247, 252);">
+<body><form class="formaLog p-3" name='f' method='POST'
+		style="background-color: rgb(255, 255, 255);">
 <label>{{rad.naziv}}</label>
-    <button name='preuzmiRad' ng-click="preuzmiRad(rad.id)">Preuzmi rad</button>
-<input class="btn btn-primary btn-block" ng-click="proveraRada(true)" value="Prihvati" style="background-color:rgb(244,133,71);"></input>
+    <button name='preuzmiRad' ng-click="preuzmiRad(rad.id)" style="border-radius:25px;">Preuzmi rad</button>
+<input class="btn btn-primary btn-block" ng-click="proveraRada(true)" value="Prihvati" style="background-color:rgb(51,51,255);"></input>
         <p class="text-center"> <a ng-click="proveraRada(false)" class="btn">Odbij rad</a></p>
 </form></body>
 </html>
+</div>

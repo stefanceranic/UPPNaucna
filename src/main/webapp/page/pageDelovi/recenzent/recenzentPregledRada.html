@@ -1,3 +1,4 @@
+<div class="body" style="padding-top:130px;">
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,12 +6,12 @@
     <title>Insert title here</title>
 </head>
 <body>
-<form name='f' method='POST'
-      style="background-color: rgb(241, 247, 252);">
+<form class="formaLog p-3" name='f' method='POST'
+      style="background-color: rgb(255, 255, 255);">
 
     <p>Naslov rada</p>
     <h1>{{rad}}</h1><br>
-    <button name='preuzmiRad' ng-click="preuzmiRad(rad.id)">Preuzmi rad</button><br>
+    <button name='preuzmiRad' ng-click="preuzmiRad(rad)">Preuzmi rad</button><br>
     <div ng-repeat="property in properties.formFields">
         <p>{{property.label}}</p>
         <input ng-if="property.type.name=='string' && property.id!='putanjaFajla'" ng-model="model[property.id]"
@@ -20,7 +21,8 @@
                 ng-model="model[property.id]"></select>
     </div>
     <br>
-    <input class="btn btn-primary btn-block" ng-click="potvrdiRecenziju()" value="Potvrdi recenziju" style="background-color:rgb(244,133,71);"></input>
+    <input class="btn btn-primary btn-block" ng-click="potvrdiRecenziju()" value="Potvrdi recenziju" style="background-color:rgb(51,51,255);color:white;"></input>
 </form>
 </body>
 </html>
+</div>

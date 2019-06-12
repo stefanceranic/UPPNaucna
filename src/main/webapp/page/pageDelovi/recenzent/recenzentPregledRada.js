@@ -40,7 +40,7 @@ naucnaCentrala.controller('recenzentPregledRada', [
 
             $scope.preuzmiRad = function(y) {
 
-                $http.post("http://localhost:8080/rad/download", y, {
+                $http.post("http://localhost:8080/rad/downloadNaziv", y, {
                     responseType : 'arraybuffer'
                 }).then(function(response) {
                     var myData = new Blob([ response.data ], {

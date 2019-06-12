@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="body">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:rgb(51,51,255)">
   <a class="navbar-brand" href="#">Pocetna</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -12,12 +13,14 @@
     </ul>
   </div>
 </nav>
-
-<form name='f' method='POST' style="background-color:rgb(241,247,252);">
+<div class="container">
+<form class="formaLog p-3 mt-5" name='f' method='POST' style="background-color:rgb(255,255,255);">
     <h1 class="text-center" style="height:70px;">Dobrodosao korisnice</h1>
     <div >
         <label>Izaberite opciju</label>
-        <input class="btn btn-primary btn-block" type="submit" value="Prijavite rad" ng-click="toPrijaviRad()" style="background-color:rgb(244,133,71);"></input>
-        <input class="btn btn-primary btn-block" type="submit" value="Radovi za ispravku" ng-click="toRadoviZaIspravku()"style="background-color:rgb(244,133,71);"></input>
+        <input class="btn btn-primary btn-block" type="submit" value="Prijavite rad" ng-click="toPrijaviRad()" style="background-color:rgb(51,51,255);"></input>
+        <input class="btn btn-primary btn-block" type="submit" value="Radovi za ispravku" ng-click="toRadoviZaIspravku()"style="background-color:rgb(51,51,255);"></input>
     </div>
 </form>
+</div>
+</div>

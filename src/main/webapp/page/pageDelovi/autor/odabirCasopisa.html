@@ -1,16 +1,23 @@
+<div class="body" style="padding-top:130px;">
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 
 </head>
+
 <body>
-Odaberite casopis
+<div class="container">
+<form class="formaLog p-3">
+Odaberite ponudjeni casopis:
 <div ng-repeat="casopis in casopisi">
     <label>{{casopis.naziv}}</label>
-    <button name='odaberiCasopis' ng-click="odaberiCasopis(casopis.naziv)">Odaberi Casopis</button>
+    <button name='odaberiCasopis' ng-click="odaberiCasopis(casopis.naziv)" class="form-control">Odaberi Casopis</button>
 </div>
-
+</form>
+</div>
 </body>
+</div>
 </html>

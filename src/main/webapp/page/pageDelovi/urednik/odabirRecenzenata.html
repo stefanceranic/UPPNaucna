@@ -1,3 +1,4 @@
+<div class="body" style="padding-top:130px">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +6,13 @@
     <title>Title</title>
 </head>
 <body>
+<div class="container">
+<form class="formaLog p-3" style="background-color:rgb(255,255,255);">
 <div ng-repeat="task in taskovi">
-    <label>{{task.rad}}</label>
-    <button name='odaberiRad' ng-click="odaberiRad(task)">Odaberi rad za recenziju</button>
+        <button class="form-control" name='odaberiRad' ng-click="odaberiRad(task)" style="background-color:rgb(51,51,255);color:white;">{{task.rad}}</button>
+</div>
+</form>
 </div>
 </body>
 </html>
+</div>

@@ -47,8 +47,8 @@ public class CasopisController {
 		return c;
 	}
 
-	@PostMapping(path = "/odaberi/{taskId}", produces = "application/json")
-	public @ResponseBody ResponseEntity<?> odaberiCasopis(@PathVariable String taskId, @RequestBody String naziv) {
+	@PostMapping(path = "/odaberi/{taskId}/{autor}", produces = "application/json")
+	public @ResponseBody ResponseEntity<?> odaberiCasopis(@PathVariable String taskId, @RequestBody String naziv, @PathVariable String autor) {
 
 		HashMap<String, Object> map = new HashMap<>();
 		map.put("casopis", naziv);
@@ -56,6 +56,7 @@ public class CasopisController {
 		Task task = taskService.createTaskQuery().taskId(taskId).singleResult();
 		String processInstanceId = task.getProcessInstanceId();
 		runtimeService.setVariable(processInstanceId, "casopis", naziv);
+		runtimeService.setVariable(processInstanceId, "autor", autor);
 
 		if (casopis.isOpenAccess() == false)
 			runtimeService.setVariable(processInstanceId, "openAccess", false);

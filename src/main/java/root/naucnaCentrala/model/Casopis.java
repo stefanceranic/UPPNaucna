@@ -41,6 +41,9 @@ public class Casopis implements Serializable {
 
 	@Column
 	private boolean openAccess;
+	
+	@OneToMany
+	public List<Korisnik> clanovi;
 
 	public Casopis() {
 	}
@@ -125,4 +128,14 @@ public class Casopis implements Serializable {
 	public void setIssn(Long issn) {
 		this.issn = issn;
 	}
+
+	public List<Korisnik> getClanovi() {
+		return clanovi;
+	}
+
+	public void setClanovi(List<Korisnik> clanovi) {
+		this.clanovi = clanovi;
+	}
+	
+	
 }

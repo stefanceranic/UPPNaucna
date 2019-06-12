@@ -19,8 +19,10 @@
     </ul>
   </div>
 </nav>
-	<form name='f' method='POST'
-		style="background-color: rgb(241, 247, 252);">
+<div class="body" style="padding-top:130px;">
+	<div class="container">
+	<form  class="formaLog p-3" name='f' method='POST'
+		style="background-color: rgb(255, 255, 255);">
 		<h2>NASLOV</h2>
 		{{rad.naziv}}
 		<h3>apstrakt</h3>
@@ -29,8 +31,10 @@
 		{{rad.naucnaOblast}}
 		<h3>kljucne reci</h3>
 		{{rad.kljucneReci}}
-		<input class="btn btn-primary btn-block" ng-click="proveraRada(true)" value="Prihvati" style="background-color:rgb(244,133,71);"></input>
-        <p class="text-center"> <a ng-click="proveraRada(false)" class="btn">Odbij rad</a></p>
+		<input class="btn btn-primary btn-block" ng-click="proveraRada(true)" value="Prihvati" style="background-color:rgb(51,51,255);"></input>
+        <p class="text-center"> <a ng-click="proveraRada(false)" class="btn btn-primary btn-block" style="background-color:rgb(51,51,255);color:white;">Odbij rad</a></p>
 	</form>
+	</div>
+	</div>
 </body>
 </html>

@@ -22,6 +22,30 @@ public class EmailServiceImpl {
         message.setText(text);
         emailSender.send(message);
     }
+    
+    public void uplataProsla(
+            String to) {
+    	System.out.println("Uplata prosla");
+        String text="Uplata prosla";
+        String subject ="Uplata prosla";
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setTo(to);
+        message.setSubject(subject);
+        message.setText(text);
+        emailSender.send(message);
+    }
+    
+    public void uplataNijeProsla(
+            String to) {
+    	System.out.println("Uplata nije prosla");
+        String text="Uplata nije prosla";
+        String subject ="Uplata nije prosla";
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setTo(to);
+        message.setSubject(subject);
+        message.setText(text);
+        emailSender.send(message);
+    }
 
     public void mailPotvrdePrijaveRada(String to){
         String text="Prijavljen novi rad!";

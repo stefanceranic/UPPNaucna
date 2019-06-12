@@ -1,5 +1,6 @@
-<div class="login-clean" style="background-color:rgb(255,255,255);padding-top:130px;">
-    <form name='f' method='POST' ng-submit="submit()" style="background-color:rgb(241,247,252);">
+<div class="body" style="background-color:rgb(255,255,255);padding-top:130px;">
+  <div class="container">
+    <form name='f' method='POST' ng-submit="submit()" class="formaLog p-3" style="background-color:rgb(241,247,252);">
         <h1 class="text-center" style="height:70px;">Registruj se</h1>
         <div ng-repeat="property in properties.formFields">
             <label>{{property.label}}</label>
@@ -9,4 +10,5 @@
         </div>
         <input class="btn btn-primary btn-block" type="submit" value="Registruj se" style="background-color:rgb(244,133,71);"></input>
     </form>
+    </div>
 </div>

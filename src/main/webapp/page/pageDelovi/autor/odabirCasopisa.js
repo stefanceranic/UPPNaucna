@@ -1,12 +1,14 @@
 naucnaCentrala.controller('odabirCasopisa', [
 		'$scope',
+		'$rootScope',
 		'$state',
 		'$http',
-		function($scope, $state, $http) {
+		function($scope, $rootScope, $state, $http) {
 
 			$scope.casopisi = [];
 			$scope.properties = [];
 			$scope.casopis={};
+			
 
 			$scope.pokreniProces = function() {
 				$http.get("http://localhost:8080/process/start").then(
@@ -26,7 +28,7 @@ naucnaCentrala.controller('odabirCasopisa', [
 			};
 
 			$scope.odaberiCasopis = function(x) {
-				$http.post("http://localhost:8080/casopis/odaberi/"+ $scope.properties.taskId,x)
+				$http.post("http://localhost:8080/casopis/odaberi/"+ $scope.properties.taskId+"/"+$rootScope.korisnik.email,x)
                     .then(function(response) {
                         $state.go("prijavaRada",{"processId": $scope.properties.processInstanceId});
 				}).then(function(value) {
